@@ -178,7 +178,11 @@ export default class JsonFormatter extends Formatter {
         uri,
       })
     })
-    this.log(JSON.stringify(features, null, 2))
+    try {
+      this.log(JSON.stringify(features, null, 2))
+    } catch (e) {
+      this.log(e)
+    }
   }
 
   getFeatureData({
