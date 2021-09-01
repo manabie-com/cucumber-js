@@ -178,11 +178,13 @@ export default class JsonFormatter extends Formatter {
         uri,
       })
     })
-    try {
-      this.log(JSON.stringify(features, null, 2))
-    } catch (e) {
-      console.warn(e)
+    let out = '['
+    for (let indx = 0; indx < features.length - 1; indx++) {
+      out += JSON.stringify(features[indx]) + ','
     }
+    out += JSON.stringify(features[features.length - 1]) + ']'
+    console.log(out)
+    this.log(out)
   }
 
   getFeatureData({
