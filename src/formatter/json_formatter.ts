@@ -178,6 +178,9 @@ export default class JsonFormatter extends Formatter {
         uri,
       })
     })
+    if (features.length === 0) {
+      return this.log('[]')
+    }
     let out = '['
     for (let indx = 0; indx < features.length - 1; indx++) {
       out += JSON.stringify(features[indx]) + ','
