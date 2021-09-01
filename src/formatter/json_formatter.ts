@@ -181,7 +181,7 @@ export default class JsonFormatter extends Formatter {
     try {
       this.log(JSON.stringify(features, null, 2))
     } catch (e) {
-      this.log(e)
+      console.warn(e)
     }
   }
 
