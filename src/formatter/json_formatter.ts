@@ -183,7 +183,6 @@ export default class JsonFormatter extends Formatter {
       out += JSON.stringify(features[indx]) + ','
     }
     out += JSON.stringify(features[features.length - 1]) + ']'
-    console.log(out)
     this.log(out)
   }
 
