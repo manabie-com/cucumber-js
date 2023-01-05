@@ -5,7 +5,7 @@
 @rerun.txt
 coverage/
 html-formatter.html
-lib/
+# lib/
 messages.ndjson
 node_modules
 tmp/
